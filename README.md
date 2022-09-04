@@ -21,7 +21,7 @@ $version = $ipa['version'];
 $icon_content = $ipa['icon_content'];
 ```
 
-You can easily to decode the base64 by base64_decode($icon_content);
+You can easily to decode the base64 by ```base64_decode($icon_content);``` 
 Then you can do what you want with the content!
 
 I hope this help you!
