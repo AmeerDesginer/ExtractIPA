@@ -21,7 +21,7 @@ function ExtractIPA($IPA_PATH) {
                   $PLIST_FILE = "$DOT_APP_FOLDER/Info.plist";
                   if (file_exists($PLIST_FILE)) {
                       // ok
-                      $AppName     = PlistBuddy($PLIST_FILE, "CFBundleDisplayName")[0];
+                      $AppName     = PlistBuddy($PLIST_FILE, "CFBundleDisplayName")[0] ?? PlistBuddy($PLIST_FILE, "CFBundleName")[0];
                       $AppBundleID = PlistBuddy($PLIST_FILE, "CFBundleIdentifier")[0];
                       $AppVersion  = PlistBuddy($PLIST_FILE, "CFBundleShortVersionString")[0];
                       $AppIcon     = basename(array_reverse(glob("$DOT_APP_FOLDER/AppIcon*.png"))[0]);
